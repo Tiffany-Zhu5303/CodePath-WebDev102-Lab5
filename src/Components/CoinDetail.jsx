@@ -1,5 +1,6 @@
 import React, {Component, useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
+import NotFound from "../../routes/NotFound";
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
 const CoinDetail = () => {
@@ -21,12 +22,12 @@ const CoinDetail = () => {
             setFullDetails({"numbers": detailsJson.DISPLAY, "textData": descriptionJson.Data});
         }
 
-        getCoinDetails().catch(console.error);2
+        getCoinDetails().catch(console.error);
     }, [params.symbol])
 
     return(
         <div>
-            {fullDetails ? (
+            {fullDetails && fullDetails.textData ? (
             <div>
                 <h1>{fullDetails.textData[params.symbol].FullName}</h1>
                 <img className="images" src={`https://www.cryptocompare.com/${fullDetails.numbers[params.symbol].USD.IMAGEURL}`}
@@ -97,7 +98,7 @@ const CoinDetail = () => {
                         </tr>
                     </tbody>
                 </table>
-            </div>):<div>No data found for {params.symbol}</div>}
+            </div>):(<NotFound />)}
         </div>
     );
 }
