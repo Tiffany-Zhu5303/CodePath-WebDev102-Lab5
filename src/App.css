@@ -1,0 +1,53 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background-color: black;
+}
+
+li {
+  list-style-position: inside;
+}
+
+li.main-list {
+  padding: 25px;
+  border-bottom: solid 3px white;
+  font-size: larger;
+}
+
+ul {
+  list-style: none;
+  margin: 25px 50px 75px 30px;
+}
+
+.whole-page {
+  padding: 50px;
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+.sidenav {
+  height: 100%;
+  width: 25%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #232323;
+  padding: 15px 10px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icons {
+  padding-right: 10px;
+  width: 30px;
+  height: 30px;
+}
