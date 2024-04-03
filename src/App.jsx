@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import CoinInfo from './Components/CoinInfo';
-import SideNavbar from './Components/SideNavbar';
+// import SideNavbar from './Components/SideNavbar';
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className='whole-page'>
-      <SideNavbar />
+      {/* <SideNavbar /> */}
       <h1>My Crypto List</h1>
       <input type="text" placeholder='search...' onChange={(inputString)=>searchItems(inputString.target.value)}/>
       <ul>

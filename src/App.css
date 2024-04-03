@@ -24,6 +24,19 @@ ul {
   margin: 25px 50px 75px 30px;
 }
 
+nav {
+  position: fixed; 
+  top: 0; 
+  right: 0; 
+}
+
+.home-link 
+{
+  border:1px dotted white;
+  background:#1d1f1d;
+  width:75px;
+}
+
 .whole-page {
   padding: 50px;
   text-align: center;
@@ -50,4 +63,9 @@ ul {
   padding-right: 10px;
   width: 30px;
   height: 30px;
+}
+
+.tab {
+  display: inline-block;
+  margin-left: 75px;
 }
