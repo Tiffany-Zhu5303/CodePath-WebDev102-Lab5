@@ -15,7 +15,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index={true} element={<App />}></Route>
-          <Route index={false} path="/coinDetails/:symbol" element={<DetailView />}></Route>
+          <Route index={false} path="/coinDetails/:symbol" element={<DetailView />}>
+          </Route>
           <Route path="*" element={ <NotFound /> }/>
         </Route>
       </Routes>
